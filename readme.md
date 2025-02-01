@@ -36,7 +36,7 @@ A responsive profile card component built with HTML, CSS, and vanilla JavaScript
 
 ![Card Front Preview](public/assets/images/card-front.png)
 
-### <span id="front-preview"> Card Back </span>
+### <span id="back-preview"> Card Back </span>
 
 ![Card Back Preview](public/assets/images/card-back.png)
 
@@ -68,7 +68,7 @@ A responsive profile card component built with HTML, CSS, and vanilla JavaScript
 1. Clone the repository:
 
 ```bash
-git clone [your-repository-url]
+git clone [repository-url]
 ```
 
 2. Navigate to the project directory:
@@ -91,7 +91,7 @@ project-root/
 ├── public/
 │   ├── assets/
 │   │   ├── images/    # Image assets
-│   │   └── icons/     # SVG icons
+│   │   └── ...
 │   │
 │   └── ...
 │
@@ -106,7 +106,7 @@ project-root/
 - Full name (data-testid="fullName")
 - Job title (data-testid="jobTitle")
 - Current location (data-testid="currentLocation")
-- Email address
+- Email address (data-testid="emailAddress")
 - Current time and day (data-testid="currentDay", data-testid="currentTimeUTC")
 - Social media links with hover effects
 - Flip button to view bio
