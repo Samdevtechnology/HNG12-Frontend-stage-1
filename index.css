@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  background-color: #8e9dcc;
+  color: #333;
+}
+li {
+  list-style: none;
+}
+
+/* Components Styles  */
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Brief Section Styles */
+
+#brief-container {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+#brief {
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.brief-header {
+  background-color: #d9dbf1;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+/* .brief-header:hover {
+  background-color: #8e9dcc;
+} */
+
+.brief-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.brief-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.brief-icon::before,
+.brief-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.brief-icon::before {
+  width: 2px;
+  height: 20px;
+  left: 9px;
+  top: 0;
+}
+
+.brief-icon::after {
+  width: 20px;
+  height: 2px;
+  left: 0;
+  top: 9px;
+}
+
+#brief.active .brief-icon::before {
+  transform: rotate(90deg);
+}
+
+.brief-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #f9f9ed;
+}
+
+.brief-content-inner {
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* Profile Card Styles */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 264px;
+  height: 416px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background: #f9f9ed;
+}
+
+.card-back {
+  background: #d9dbf1;
+  transform: rotateY(180deg);
+}
+
+.flip-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0;
+  color: #007bff;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Card Image styles */
+
+#card-img {
+  width: 100%;
+  height: 50%;
+}
+
+.profile-pic-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #7d84b2;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -3rem;
+  right: -3rem;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Card Details styles */
+
+#card-details {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-job {
+  margin-bottom: 0.2rem;
+}
+
+.profile-location,
+.profile-email,
+.current-time {
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.profile-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+/* Social Links styles */
+
+#card-footer {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0.5rem;
+}
+
+#social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+#social-links > li > a {
+  color: #333;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.instagram:hover {
+  color: #c13584;
+}
+
+.linkedin {
+  fill: #333;
+}
+.linkedin:hover {
+  fill: #0a66c2;
+}
+
+/* Card Back */
+
+#profile-bio {
+  padding: 1rem;
+}
+
+.bio-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 480px) {
+  .brief-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+}
