@@ -116,6 +116,7 @@ li {
   justify-content: center;
   align-items: center;
   perspective: 1000px;
+  margin: 2.5rem 0;
 }
 
 .flip-card {
